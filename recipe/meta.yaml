@@ -1,5 +1,5 @@
 {% set name = "safer" %}
-{% set version = "4.2.0" %}
+{% set version = "4.2.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a787bcc8c873e83a8fac30a1806893c35e206a9e8e2564be149426195f9530af
+  sha256: c12cc0b46f0de95a1cf6b3f4fa5940f983ad04a22abbc0873767795d1a9f4282
   patches:
     - win-charmap-codec.patch
 

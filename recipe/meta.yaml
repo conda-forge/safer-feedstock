@@ -1,5 +1,5 @@
 {% set name = "safer" %}
-{% set version = "4.3.0" %}
+{% set version = "4.4.0" %}
 
 
 package:
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2d90ef3a01870c59bd1b29f5ffc515a380d736602b6d222e89a7585c3db0f34a
+  sha256: a26ea052cb188d7e696c7cf5b3dbabf4e065f4397802d9491898666cff6abd56
   patches:
     - win-charmap-codec.patch
 
 build:
-  number: 2
+  number: 0
   # cannot be noarch b/c it does not use entrypotins, just scripts :-/
   # noarch: python
   script: {{ PYTHON }} -m pip install . -vv

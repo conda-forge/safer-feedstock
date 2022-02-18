@@ -1,5 +1,5 @@
 {% set name = "safer" %}
-{% set version = "4.4.0" %}
+{% set version = "4.4.1" %}
 
 
 package:
@@ -8,22 +8,19 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a26ea052cb188d7e696c7cf5b3dbabf4e065f4397802d9491898666cff6abd56
-  patches:
-    - win-charmap-codec.patch
+  sha256: 4c7b5d4c5d440ac15d6e3b2269eeede477e0fa65f99bd5464377b0f4e3c1930f
 
 build:
-  number: 1
-  # cannot be noarch b/c it does not use entrypotins, just scripts :-/
-  # noarch: python
+  number: 0
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
 
 test:
   imports:

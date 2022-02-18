@@ -9,21 +9,18 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 4c7b5d4c5d440ac15d6e3b2269eeede477e0fa65f99bd5464377b0f4e3c1930f
-  patches:
-    - win-charmap-codec.patch
 
 build:
   number: 0
-  # cannot be noarch b/c it does not use entrypotins, just scripts :-/
-  # noarch: python
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
 
 test:
   imports:

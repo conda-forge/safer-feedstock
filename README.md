@@ -7,7 +7,7 @@ Home: https://github.com/rec/safer
 
 Package license: MIT
 
-Summary: A safer file opener
+Summary: 🧿 A safer writer for files and streams 🧿
 
 Current build status
 ====================

@@ -1,5 +1,5 @@
 {% set name = "safer" %}
-{% set version = "4.10.1" %}
+{% set version = "4.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/safer-{{ version }}.tar.gz
-  sha256: c3279c01c951d9742421598daaf0173c669914ceecbb051ba94f016d8b43bfcb
+  sha256: 5e7c41c7b4b9870b73351ac14af4cea061ece9eeb1e7d6d856a27e0a80749642
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - poetry-core
     - pip
   run:
+    - black >=23.12.0,<24.0.0
     - python >=3.7,<4.0
 
 test:

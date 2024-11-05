@@ -1,5 +1,5 @@
 {% set name = "safer" %}
-{% set version = "5.0.0" %}
+{% set version = "5.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/safer-{{ version }}.tar.gz
-  sha256: 3da5353843bd78f9975ca4402378df11c8cda47f82f630e16233e0c8e7dab31e
+  sha256: 291432798173bdf6211d288e9f0ef550d4345eddd8a2bc9dfc658cb1dea8a231
 
 build:
   noarch: python

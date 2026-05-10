@@ -1,0 +1,46 @@
+schema_version: 1
+
+context:
+  version: "5.4.0"
+
+package:
+  name: safer
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/s/safer/safer-${{ version }}.tar.gz
+  sha256: 6adfe6c021fe0e215233a78965bb780425259fe707353cb581a524d90ab1e4bc
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - poetry-core
+    - pip
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - safer
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: 🧿 A safer writer for files and streams 🧿
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/rec/safer
+  documentation: https://rec.github.io/safer
+
+extra:
+  recipe-maintainers:
+    - ocefpaf

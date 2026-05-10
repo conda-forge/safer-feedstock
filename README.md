@@ -9,6 +9,8 @@ Package license: MIT
 
 Summary: 🧿 A safer writer for files and streams 🧿
 
+Documentation: https://rec.github.io/safer
+
 Current build status
 ====================
 

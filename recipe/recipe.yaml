@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "5.4.0"
+  version: "6.0.4"
 
 package:
   name: safer
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/safer/safer-${{ version }}.tar.gz
-  sha256: 6adfe6c021fe0e215233a78965bb780425259fe707353cb581a524d90ab1e4bc
+  sha256: bc1e540efd30c352288d1acf40648e0be826775dddbb4b6ef2b198ff2e1b482f
 
 build:
   number: 0
